@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+</head>
+<body>
+    <h1>Olá, {{ session['usuario_nome'] }}!</h1>
+
+    <h2>Suas Compras</h2>
+    {% if compras %}
+        <ul>
+        {% for compra in compras %}
+            <li>ID da compra: {{ compra[0] }} | Produto ID: {{ compra[2] }} | quantidade: {{ compra[3] }} | data: {{compra[4]}}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Você ainda não realizou nenhuma compra.</p>
+    {% endif %}
+
+    <h2>Seus Endereços</h2>
+    {% if enderecos %}
+        <ul>
+        {% for endereco in enderecos %}
+            <li>{{ endereco[2] }}, {{ endereco[3] }} - {{ endereco[4] }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Você ainda não cadastrou endereços.</p>
+    {% endif %}
+
+    <h2>Seus Cartões</h2>
+    {% if cartoes %}
+        <ul>
+        {% for cartao in cartoes %}
+            <li>Final: {{ cartao[2][-4:] }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Você ainda não adicionou cartões.</p>
+    {% endif %}
+
+    <br>
+    <a href="{{ url_for('main.logout') }}">Sair</a>
+    <a href="{{ url_for('main.produtos') }}">produtos</a>
+</body>
+</html>

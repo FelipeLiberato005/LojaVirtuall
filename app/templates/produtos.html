@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <a href="{{ url_for('main.perfil') }}">perfil</a>
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                <strong>{{ produto[1] }}</strong><br>
+                {{ produto[2] }}<br>
+                Preço: R$ {{ produto[3] }}<br>
+                Categoria: {{ produto[4] }}<br>
+                Estoque: {{ produto[5] }}<br>
+                <img src="{{ url_for('static', filename='images/' + produto[6]) }}" width="150">
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+</body>
+</html>
