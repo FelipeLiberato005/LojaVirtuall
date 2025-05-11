@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.log
+
+# Environments
+.env
+venv/
+ENV/
+env/
+.venv/
+
+# PyCharm
+.idea/
+
+# Flask instance folder (configurações locais, DBs, etc)
+instance/
+
+# SQLite database (caso use localmente)
+*.sqlite3
+*.db
+
+# Uploads ou arquivos temporários (se houver)
+uploads/
+*.bak
+*.swp
+
+# Arquivos de testes temporários
+*.tmp
