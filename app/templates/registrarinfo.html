@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h2>Informações de endereços</h2>
+    <form method="POST" action="{{ url_for('main.enderecos') }}">
+        Endereco: <input type="text" name="endereco" required><br><br>
+        Cidade: <input type="text" name="cidade" required><br><br>
+        Estado: <input type="text" name="estado" required><br><br>
+        Cep: <input type="text" name="cep" required><br><br>
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>

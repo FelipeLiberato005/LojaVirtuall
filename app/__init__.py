@@ -20,7 +20,7 @@ def create_app():
 # aqui vai iniciar o MySQL com o app
 
 
-    from app.rotas.routes import main
+    from app.routes import main
 
     app.register_blueprint(main)
     return app

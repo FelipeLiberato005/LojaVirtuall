@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h2>Informações de endereços</h2>
+    <form method="POST" action="{{ url_for('main.cartoes') }}">
+        Numero: <input type="text" name="numero_cartao" required><br><br>
+        Nome Titular: <input type="text" name="nome_titular" required><br><br>
+        VALIDADE: <input type="text" name="validade" required><br><br>
+        CVV: <input type="text" name="cvv" required><br><br>
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>

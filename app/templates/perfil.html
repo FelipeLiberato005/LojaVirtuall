@@ -33,7 +33,7 @@
     {% if cartoes %}
         <ul>
         {% for cartao in cartoes %}
-            <li>Final: {{ cartao[2][-4:] }}</li>
+            <li>Final: {{ cartao[2][-4:] }} | Nome: {{ cartao[3] }} | Validade: {{ cartao[4] }} | CVV: {{cartao[5]}}</li>
         {% endfor %}
         </ul>
     {% else %}
@@ -43,5 +43,7 @@
     <br>
     <a href="{{ url_for('main.logout') }}">Sair</a>
     <a href="{{ url_for('main.produtos') }}">produtos</a>
+    <a href="{{ url_for('main.enderecos') }}">Endereços</a>
+    <a href="{{ url_for('main.cartoes') }}">Cartão</a>
 </body>
 </html>
